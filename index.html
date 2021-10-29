@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Lau</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./player.js" defer></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    
+    <div class="nav-container">
+        <header>
+            <a href="index.html" class="logo">Sean Lau</a>
+
+            <nav>
+                <ul>
+                   <li><a href="#featured">作品</a></li> 
+                   <li><a href="#services">服务</a></li> 
+                   <li><a href="#portfolio">联系</a></li> 
+                </ul>
+            </nav>
+       
+        </header>
+        
+        <div class="social-header">
+            <ul>
+                <li><a href="#portfolio"><img src="./image/wechat/wechat.png" alt="wechat"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="content">
+            <h1 class="stagger1">定制<br>
+            您的音乐制作专案<br>
+            词曲写作 编曲 混音</h1>
+            <div class="listen stagger1">
+                <span>👇</span>
+                <p>请试听</p>
+            </div>
+            <svg class="scroll stagger1" width="61" height="116" viewBox="0 0 61 116">
+                <g id="scroll" transform="translate(-154 -693)">
+                  <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(154 693)" fill="none" stroke="#fff" stroke-width="8">
+                    <rect width="61" height="116" rx="30.5" stroke="none"/>
+                    <rect x="4" y="4" width="53" height="108" rx="26.5" fill="none"/>
+                  </g>
+                  <ellipse class="circle" id="Ellipse_1" data-name="Ellipse 1" cx="15.5" cy="18" rx="15.5" ry="18" transform="translate(169 711)" fill="#fff"/>
+                </g>
+              </svg>
+        </div>
+        <svg class="hero-design" width="640" height="640" viewBox="0 0 640 640">
+            <g id="blockdesign" transform="translate(-965 -267)">
+              <rect class="square-anim" data-name="Rectangle 2" width="160" height="160" rx="20" transform="translate(1285 267)" fill="#5b00f4"/>
+              <rect class="square-anim" data-name="Rectangle 6" width="160" height="160" rx="20" transform="translate(1285 587)" fill="#5b00f4"/>
+              <rect class="square-anim" data-name="Rectangle 4" width="160" height="160" rx="33" transform="translate(1445 427)" fill="#5b00f4" opacity="0.344"/>
+              <rect class="square-anim" data-name="Rectangle 3" width="160" height="160" rx="33" transform="translate(1125 427)" fill="#fff"/>
+              <rect class="square-anim" data-name="Rectangle 7" width="160" height="160" rx="33" transform="translate(1125 747)" fill="#fff"/>
+              <rect class="square-anim" data-name="Rectangle 5" width="160" height="160" rx="33" transform="translate(965 587)" fill="#fff" opacity="0.209"/>
+              <circle class="square-anim" data-name="Ellipse 2" cx="80" cy="80" r="80" transform="translate(1285 427)" fill="#e22ec9"/>
+              <circle class="square-anim" data-name="Ellipse 3" cx="80" cy="80" r="80" transform="translate(1125 587)" fill="#42daff"/>
+            </g>
+        </svg>
+          
+          
+    </div>
+    
+    <section class="featured" id="featured">
+        <div class="left">
+            <div class="inner transition2">
+               <p class="subtitle">作品</p>
+               <p class="featured-title">以往作品预览</p>
+
+               <p class="featured-desc">在我们合作之前请您先试听我的以往音乐作品，当您决定合作时，请告知我您的需求，确保最终作品的呈现是您所期盼的。</p> 
+            </div> 
+        </div>
+        <!-- player start -->
+        <div class="player-body transition2">
+            <div class="wrapper">
+                <div class="top-bar">
+                  <!-- <i class="material-icons">expand_more</i>
+                  <span>Now Playing</span>
+                  <i class="material-icons">more_horiz</i> -->
+                </div>
+                <div class="img-area">
+                  <img src="" alt="">
+                </div>
+                <div class="song-details">
+                  <p class="name"></p>
+                  <p class="artist"></p>
+                </div>
+                <div class="progress-area">
+                  <div class="progress-bar">
+                    <audio id="main-audio" src=""></audio>
+                  </div>
+                  <div class="song-timer">
+                    <span class="current-time">0:00</span>
+                    <span class="max-duration">0:00</span>
+                  </div>
+                </div>
+                <div class="controls">
+                  <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+                  <i id="prev" class="material-icons">skip_previous</i>
+                  <div class="play-pause">
+                    <i class="material-icons play">play_arrow</i>
+                  </div>
+                  <i id="next" class="material-icons">skip_next</i>
+                  <i id="more-music" class="material-icons">queue_music</i>
+                </div>
+                <div class="music-list">
+                  <div class="header">
+                    <div class="row">
+                      <i class= "list material-icons">queue_music</i>
+                      <span>Music list</span>
+                    </div>
+                    <i id="close" class="material-icons">close</i>
+                  </div>
+                  <ul>
+                    <!-- here li list are coming from js -->
+                  </ul>
+                </div>
+              </div>
+        </div>
+        
+          <script src="music-list.js"></script>
+          <script src="js/script.js"></script>
+        <!-- player end -->
+        
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-container">
+            <ul>
+                <li class="transition2">
+                     <div class="icon-container one">
+                          <img src="./image/musicnote/2x/musicnote.png" alt="">
+                          <img src="./image/editnote/2x/editnote.png" alt="">
+                     </div>
+                     <p class="service-title">词曲创作</p>
+                     <p class="featured-desc service-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dolore.</p>
+                </li>
+                <li class="transition2">
+                     <div class="icon-container two">
+                          <img src="./image/piano/2x/piano.png" alt="">
+                        
+                     </div>
+                     <p class="service-title">编曲</p>
+                     <p class="featured-desc service-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dolore.</p>
+                </li>
+                <li class="transition2">
+                     <div class="icon-container three">
+                          <img src="./image/adjust.png" alt="">
+                    </div>
+                          
+                     <p class="service-title">混音</p>
+                     <p class="featured-desc service-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, dolore.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container transition3">
+              <!-- <div class="portfolio-left">
+                  <div class="inner">
+                      <p class="subtitle">刘羽晟 Sean</p>
+                      <p class="featured-title">Music producer</p>
+                  </div>
+                  <div class="wechat-container">
+                      <img src="./image/wechat/wechat.png" alt="">
+                      <p class="wechatid">18686522947</p>
+                  </div>
+              </div> -->
+              <div class="portfolio-namecard" >
+                <div class="profile-sider">
+                  <div class="profile-image" ><img src="./image/namecard.jpg" alt=""></div>
+                  <li class="social-item"><i class="fab fa-weixin"></i></li>
+                  <p>18686522947</p>
+                </div>
+                <div class="prolile-main">
+                  <p class="profile-name">刘羽晟</p>
+                  <p class="profile-position">Music producer</p>
+                  <p class="profile-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit.di ea non, atque molestias menda cumque! Tempora, amet quos!</p>
+                </div>
+               
+              </div>
+
+        </div>
+    </section>
+
+     <!-- <div class="portfolio" id="portfolio">
+       <div class="profile-sider">
+         <img src="" alt="">
+       </div>
+       <div class="prolile-main">
+         <p class="profile-name">刘羽晟</p>
+         <p class="profile-position">Music producer</p>
+         <p class="prifile-body">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, optio? Quaerat ducimus, esse eligendi ea non, atque molestias necessitatibus pariatur totam sint autem blanditiis quibusdam, assumenda cumque! Tempora, amet quos!</p>
+       </div>
+     </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      var tl= gsap.timeline();
+
+      tl.from('.content',{
+        y:'-30%',
+        opacity:0,
+        duration:2,
+        ease:Power4.easeOut,
+      })
+      tl.from('.stagger1',{
+        y:-50,
+        stagger:.3,
+        opacity:0,
+        duration:2,
+        ease:Power4.easeOut,
+      },'-=1.5');
+      tl.from('.hero-design',{
+        opacity:0,
+        y:50,
+        ease:Power4.easeOut,
+        duration:1
+      },'-=2')
+
+      gsap.from(".square-anim",{
+        stagger:.2,
+        scale:0.1,
+        duration:1,
+        ease:Back.easeOut.config(1.7),
+      })
+
+      gsap.from('.transition2',{
+        scrollTrigger:{
+          trigger:'.transition2',
+          start:"top bottom",
+        },
+        y:50,
+        opacity:0,
+        duration:1.3,
+        stagger:.3 
+      })
+      
+      gsap.from('.transition3',{
+        scrollTrigger:{
+          trigger:'.transition3',
+          start:"top bottom",
+        },
+        y:50,
+        opacity:0,
+        duration:1.3,
+        stagger:.6
+      })
+      </script>
+
+          
+        
+
+</body>
+</html>
